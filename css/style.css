@@ -10,12 +10,14 @@ body {
     font-weight: 475;
 }
 
+/* Links */
 a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 475;
     color: #1af7ff
 }
 
+/* Main bit */
 p {
     font-weight: 475;
     margin: auto;
@@ -32,9 +34,6 @@ p {
     line-height: 35px;
 }
 
-p.mapmaking-body {
-    width: 50vw;
-}
 
 h1 {
     font-size: 30px;
@@ -42,7 +41,7 @@ h1 {
     font-weight: 600;
 }
 
-
+/* Silly top-nav */
 .nav {
     font-size: 12px;
     display: flex;
@@ -106,7 +105,6 @@ iframe {
     transition-duration: 400ms;
     color: #FFF;
 
-    font-size: 10pt;
     font-family: 'Montserrat', sans-serif;
     background: none;
     border: 0px;
