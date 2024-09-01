@@ -8,6 +8,7 @@ body {
     height: 100%;
     margin: 0px;
     font-weight: 475;
+    overflow: auto;
 }
 
 /* Links */
@@ -31,7 +32,9 @@ a {
 }
 
 .nav_logo {
-    padding: 7px
+    margin: 0px !important;
+    padding: 7px;
+    width: auto
 }
 .nav > a {
     margin-top: 12px !important;
@@ -45,7 +48,7 @@ a {
 }
 
 /* Main bit */
-p {
+p.home {
     font-weight: 475;
     margin: auto;
     margin-top: 20px;
@@ -143,9 +146,77 @@ button {
     font-size: 12pt;
     font-family: 'Montserrat', sans-serif;
 
-    border: 0;
+    border: 0px;
 }
 button:hover {
     transition-duration: 200ms;
     background-color: #1af7ff;
+}
+
+/* Mapmaking table */
+table {
+    box-sizing: border-box;
+    width: 100%;
+    border-spacing: 20px;
+    table-layout: fixed; /* Ensures table cells have fixed width */
+    height: 200px !important;
+    overflow: hidden
+}
+td {
+    box-sizing: border-box;
+    background-color: #00000070;
+    padding: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 35px;
+    vertical-align: top;
+}
+td.mm-content p {
+    line-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+
+a.mapmaking_sidebar {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+summary > a.mapmaking_sidebar {
+    margin-left: 5px;
+}
+
+.sidebar_detail_open {
+    padding-left: 17px !important;
+}
+
+summary {
+    color: white;
+    cursor: pointer;
+}
+
+details {
+    color: #CBCBCB;
+    cursor: default;
+}
+
+h4 {
+    margin-top: 40px;
+    margin-bottom: 10px
+}
+img {
+    margin-bottom: 5px;
+    margin-top: 0px;
+    width: 50%
+}
+p.img_caption {
+    color: #DDDDDD;
+    margin-bottom: 30px !important;
+}
+code {
+    padding: 2px;
+    background-color: #FFFFFF20;
+    border-width: 2px;
+    border-color: #FFFFFF20 
 }
