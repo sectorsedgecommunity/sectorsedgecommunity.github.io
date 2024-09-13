@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="se_logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sector's Edge Community</title>
+</head>
+
+<body>
+    <div class="nav">
+        <img class="nav_logo" src="se_community.png" alt="Sector's Edge Community logo">
+        <a href="index.html">Home</a>
+        <a href="community.html">Community</a>
+        <a href="https://sectorsedgecommunity.github.io/serverslist">Server List</a>
+        <a href="map_making.html" style="border-bottom: solid">Map Making</a>
+    </div>
+    <div class="content" style="display: grid">
+        <table class="server_list">
+            <tr>
+                <td style="width: 275px">
+                    <b>Sidebar</b>
+                    <details><summary><a class="mapmaking_sidebar" href="mm-json.html">JSON file</a></summary>
+                        <div class="sidebar_detail_open">Basic map info</div>
+                        <div class="sidebar_detail_open">BlockTexturesV2</div>
+                        <div class="sidebar_detail_open">Environment attributes</div>
+                        <div class="sidebar_detail_open">FlagSpawns</div>
+                        <div class="sidebar_detail_open">Game modes</div>
+                        <div class="sidebar_detail_open">InvincibleMin/Max</div>
+                        <div class="sidebar_detail_open">LinearZones</div>
+                        <div class="sidebar_detail_open">Minimap attributes</div>
+                        <div class="sidebar_detail_open">Particles</div>
+                        <div class="sidebar_detail_open">Removed attributes</div>
+                        <div class="sidebar_detail_open">RushStages</div>
+                        <div class="sidebar_detail_open">TeamSpawns</div>
+                    </details>
+                    <a class="mapmaking_sidebar" href="mm-multiplayer.html">Multiplayer support</a>
+                    <details><summary><a class="mapmaking_sidebar" href="mm-resources.html">Resources and guides</a></summary>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-bare_minimum.html">Bare minimum JSON file</a></div>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-contributing.html">How to contribute</a></div>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-getting_started.html">Getting Started</a></div>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-pdf.html">Map making PDF</a></div>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-worldpainter.html">Worldpainter to MagicaVoxel</a></div>
+                    </details>
+                </td>
+                <td class="mm-content" style="line-height: 15px">
+                    <h3>Bare minimum JSON file</h3>
+                    <p>This guide covers the bare minimum required in a map <code>json</code> file.</p>
+                    
+                    <p>All maps require a <code>Name</code>, <code>Description</code>, <code>MapSize</code>, <code>BlockTextures</code> or <code>BlockTexturesV2</code> (V2 recommended), and <code>TeamSpawns</code>.</p>
+                    
+                    
+                    <h4>Examples</h4>
+                    <p>Basic map info example</p>
+                    <pre><code>
+    "Name": "Map name",
+    "Description": "Map description\nCreated by: map author(s)",
+    "MapSize": [ 256, 96, 768 ],
+                    
+    // TeamSpawns example
+    "TeamSpawns": [
+        {
+            "GameMode": "all",
+            "Type": "box",
+            "Team": 0,
+            "Min": [ 0, 0, 0 ],
+            "Max": [ 1, 1, 1 ]
+        },
+        {
+            "GameMode": "all",
+            "Type": "box",
+            "Team": 1,
+            "Min": [ 0, 0, 0 ],
+            "Max": [ 1, 1, 1 ]
+        } 
+    ],
+                    
+    // BlockTexturesV2 example
+    "BlockTexturesV2": [
+        {
+        "Note": "Example texture",
+        "Name": "concrete",
+        "Index": 1
+        }
+    ],
+                    </code></pre>
+                    
+                    <p>Guide created by RainlessSky</p>
+                </td>
+            </tr>
+          </table>
+    </div>
+</body>
+
+</html>

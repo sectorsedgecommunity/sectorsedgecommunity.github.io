@@ -176,6 +176,16 @@ td.mm-content p {
     margin-top: 0px;
     margin-bottom: 0px
 }
+ul {
+    line-height: 25px;
+}
+pre {
+    background-color: #FFFFFF20;
+}
+pre > code {
+    background-color: transparent !important;
+    border: none !important;
+}
 
 a.mapmaking_sidebar {
     color: white;

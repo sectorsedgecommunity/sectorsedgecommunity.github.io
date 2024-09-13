@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="se_logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sector's Edge Community</title>
+</head>
+
+<body>
+    <div class="nav">
+        <img class="nav_logo" src="se_community.png" alt="Sector's Edge Community logo">
+        <a href="index.html">Home</a>
+        <a href="community.html">Community</a>
+        <a href="https://sectorsedgecommunity.github.io/serverslist">Server List</a>
+        <a href="map_making.html" style="border-bottom: solid">Map Making</a>
+    </div>
+    <div class="content" style="display: grid">
+        <table class="server_list">
+            <tr>
+                <td style="width: 275px">
+                    <b>Sidebar</b>
+                    <details><summary><a class="mapmaking_sidebar" href="mm-json.html">JSON file</a></summary>
+                        <div class="sidebar_detail_open">Basic map info</div>
+                        <div class="sidebar_detail_open">BlockTexturesV2</div>
+                        <div class="sidebar_detail_open">Environment attributes</div>
+                        <div class="sidebar_detail_open">FlagSpawns</div>
+                        <div class="sidebar_detail_open">Game modes</div>
+                        <div class="sidebar_detail_open">InvincibleMin/Max</div>
+                        <div class="sidebar_detail_open">LinearZones</div>
+                        <div class="sidebar_detail_open">Minimap attributes</div>
+                        <div class="sidebar_detail_open">Particles</div>
+                        <div class="sidebar_detail_open">Removed attributes</div>
+                        <div class="sidebar_detail_open">RushStages</div>
+                        <div class="sidebar_detail_open">TeamSpawns</div>
+                    </details>
+                    <a class="mapmaking_sidebar" href="mm-multiplayer.html">Multiplayer support</a>
+                    <details><summary><a class="mapmaking_sidebar" href="mm-resources.html">Resources and guides</a></summary>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-bare_minimum.html">Bare minimum JSON file</a></div>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-contributing.html">How to contribute</a></div>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-getting_started.html">Getting Started</a></div>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-pdf.html">Map making PDF</a></div>
+                        <div class="sidebar_detail_open"><a class="mapmaking_sidebar" href="mm-worldpainter.html">Worldpainter to MagicaVoxel</a></div>
+                    </details>
+                </td>
+                <td class="mm-content" style="line-height: 15px">
+                    <h3>World Painter</h3>
+                    
+                    <p>What you will need:</p>
+                    <ul>
+                        <li>World Painter - <a href="https://www.worldpainter.net/">https://www.worldpainter.net/</a></li>
+                        <li>MagicaVoxel (Of course 😉)</li>
+                        <li>Place the below height.txt in your shader folder</li>
+                    </ul>
+                    
+                    <p>How you do it:</p>
+                    <ul>
+                        <li>Build world in world builder</li>
+                        <li>Export as PNG</li>
+                        <li>open in paint, save as PNG (Yes even though it was exported as a PNG)</li>
+                        <li>Change color pallet to grayscale (Very important)</li>
+                        <li>Drag your saved PNG into MV</li>
+                        <li>Select the object and change Height to 256</li>
+                        <li>Select the console at the bottom and type xs height</li>
+                    </ul>
+
+                    <p>height.txt shader</p>
+                    <pre><code>
+    // console commands
+    // 'xs height'
+                        
+    // shader inputs
+    // uniform vec3     iVolumeSize;	// volume size [1-126]
+    // uniform float    iColorIndex;	// current color index [1-255]
+    // uniform vec3     iMirror;	// current mirror mode [0-1]
+    // uniform vec3     iAxis;		// current axis mode [0-1]
+                        
+    // uniform float	iFrame;		// current anim frame index
+    // uniform float 	iNumFrames;	// total num of anim frames
+                        
+    // uniform float 	iIter;		// current iteration index
+                        
+    // uniform vec4     iRand;		// random number
+    // uniform float	iArgs[8];	// user args
+                        
+    // built-in functions
+    // float voxel( vec3 v );		// get voxel color index at position v
+                        
+    // generate new voxel color index at position v
+    float map( vec3 v ) {
+        float height = 255.0 - voxel( vec3( v.xy, 0.0 ) ); //depends on palette
+                            
+        height = height * 0.5f - 1.0; // map to range [0 - 126]
+                            
+        return ( v.z <= height ? iColorIndex : 0.0 );
+    }
+    </code></pre>
+                    
+                    <p>Guide created by <code>Vhauss</code></p>
+                </td>
+            </tr>
+          </table>
+    </div>
+</body>
+
+</html>
