@@ -45,6 +45,10 @@ a {
 }
 
 /* Main bit */
+p {
+    font-family: 'Montserrat', sans-serif; 
+    color: #FFF;
+}
 p.home {
     font-size: 90%;
     font-weight: 475;
@@ -69,19 +73,12 @@ p.home {
     aspect-ratio: 16 / 9;
     max-width: 500px
 }
-.content {
-    background-color: #1b1b1f
-}
-h1 {
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
 
 .content {
     display: grid;
     width: 100%;
     height: calc(100vh - 42px);
+    background-color: #1b1b1f
 }
 
 .mapmakingdocs {
@@ -142,7 +139,7 @@ iframe {
     color: #EEE;
 }
 
-button {
+.download {
     transition-duration: 400ms;
     background-color: #14c5cc;
     color: #000;
@@ -160,6 +157,67 @@ button {
 button:hover {
     transition-duration: 200ms;
     background-color: #1af7ff;
+}
+.maps_list {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #1af7ff;
+    display: flex;
+    padding: 10px;
+    max-width: 880px;
+    margin-top: 20px !important;
+    margin: auto;
+    background-color: #00000070;
+    flex-direction: row;
+	flex-wrap: wrap;
+    min-height: 350px;
+}
+.map_tile {
+    margin: 10px;
+    background-color: #FFFFFF20;
+    aspect-ratio: 6 / 1;
+    max-width: 200px !important;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: row;
+	flex-wrap: wrap;
+    max-height: 175px;
+}
+.map_tile_preview {
+    aspect-ratio: 16 / 9;
+    background-color: #FFFFFF10;
+    width: 100%;
+    margin: 0
+}
+.map_tile_name {
+    font-size: 12px;
+    margin: 10px;
+    margin-top: 8px;
+}
+.download_map {
+    transition-duration: 400ms;
+    background-color: #FFFFFF20;
+    color: #000;
+
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    border: 0px;
+}
+.download_map:hover {
+    transition-duration: 400ms;
+    background-color: #FFFFFF40;
+}
+.download_map_icon {
+    margin: 0;
+    width: auto;
+    height: 18px;
+    image-rendering: crisp-edges;
 }
 
 /* Mapmaking table */
