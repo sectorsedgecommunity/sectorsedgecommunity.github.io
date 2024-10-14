@@ -158,6 +158,19 @@ button:hover {
     transition-duration: 200ms;
     background-color: #1af7ff;
 }
+.maps-tip {
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    margin: auto;
+    margin-top: 20px !important;
+    padding: 10px;
+    line-height: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 880px;
+    background-color: #00000070;
+}
 .maps_list {
     border-top-style: solid;
     border-top-width: 1px;
@@ -175,14 +188,13 @@ button:hover {
 .map_tile {
     margin: 10px;
     background-color: #FFFFFF20;
-    aspect-ratio: 6 / 1;
     max-width: 200px !important;
     color: #FFF;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     flex-direction: row;
 	flex-wrap: wrap;
-    max-height: 175px;
+    max-height: 180px;
 }
 .map_tile_preview {
     aspect-ratio: 16 / 9;
@@ -190,30 +202,45 @@ button:hover {
     width: 100%;
     margin: 0
 }
-.map_tile_name {
+.map_tile_name, .map_tile_author {
+    line-height: 5px;
     font-size: 12px;
     margin: 10px;
     margin-top: 8px;
 }
-.download_map {
+.map_tile_author {
+    text-rendering: optimizeLegibility;
+    font-size: 8px !important;
+    line-height: 5px;
+    color: #ABABAB;
+}
+.download-map, .download-disabled {
     transition-duration: 400ms;
     background-color: #FFFFFF20;
     color: #000;
 
     margin: 0;
+    margin-bottom: 15px;
     padding: 0;
     width: 18px;
     height: 18px;
 
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
-    border: 0px;
+    border-style: none !important;
+    border: 0;
 }
-.download_map:hover {
+.download-map {
+    background-color: #FFFFFF20;
+}
+.download-disabled {
+    background-color: #FF330030 !important;
+}
+.download-map:hover {
     transition-duration: 400ms;
     background-color: #FFFFFF40;
 }
-.download_map_icon {
+.download-map-icon {
     margin: 0;
     width: auto;
     height: 18px;
