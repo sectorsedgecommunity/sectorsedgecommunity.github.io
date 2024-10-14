@@ -1,5 +1,5 @@
 ## Sector's Edge community website
-This is the main repository for Sector's Edge community website projects.
+This repository holds the home page, community page, custom maps, and map making pages on the community website.
 
 ### Current projects
 [serverslist](https://github.com/sectorsedgecommunity/serverslist)<br>
