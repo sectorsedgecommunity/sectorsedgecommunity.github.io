@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap');
 
 body {
-    background-image:url("../cr.png");
+    background-image:url("../backgrounds/cr.png");
     background-position-x: 99%;
     background-size: cover;
     background-attachment: fixed;
@@ -49,7 +49,32 @@ p {
     font-family: 'Montserrat', sans-serif; 
     color: #FFF;
 }
-p.home {
+.p-no-margin {
+    margin: 0
+}
+h3 {
+    font-weight: 750;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    line-height: 0px;
+    color: #1af7ff;
+}
+summary {
+    transition-duration: 400ms;
+    margin: auto;
+    background-color: #FFFFFF10;
+    max-width: 100px;
+    padding: 3px;
+}
+summary:hover {
+    transition-duration: 200ms;
+    background-color: #FFFFFF30;
+}
+details {
+    margin: auto;
+    margin-bottom: 10px !important;
+}
+.home {
     font-size: 90%;
     font-weight: 475;
     margin: auto;
@@ -64,7 +89,7 @@ p.home {
     padding: 20px;
     padding-bottom: 20px;
     padding-top: 15px;
-    line-height: 30px;
+    line-height: 23px;
     border-top-color: #1af7ff;
     border-top-width: 1px;
     border-top-style: solid;
@@ -105,28 +130,6 @@ iframe {
     background: none;
 }
 
-.serverlist {
-    padding: 0px;
-    width: 71px;
-    transition-duration: 400ms;
-    color: #FFF;
-
-    font-size: 10pt;
-    font-family: 'Montserrat', sans-serif;
-    background: none;
-    border: 0px;
-}
-.mapmaking {
-    padding: 0px;
-    position: absolute;
-    width: 193px;
-    transition-duration: 400ms;
-    color: #FFF;
-
-    font-family: 'Montserrat', sans-serif;
-    background: none;
-    border: 0px;
-}
 #nav_button {
     font-weight: 475;
     background: none;
@@ -139,7 +142,7 @@ iframe {
     color: #EEE;
 }
 
-.download {
+.button-style-base {
     transition-duration: 400ms;
     background-color: #14c5cc;
     color: #000;
@@ -159,17 +162,16 @@ button:hover {
     background-color: #1af7ff;
 }
 .maps-tip {
+    letter-spacing: 0.1px;
+    font-weight: 500;
     text-align: center;
-    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
     font-size: 14px;
     margin: auto;
-    margin-top: 20px !important;
     padding: 10px;
     line-height: 18px;
-    padding-top: 15px;
     padding-bottom: 15px;
     max-width: 880px;
-    background-color: #00000070;
 }
 .maps_list {
     border-top-style: solid;
@@ -237,7 +239,7 @@ button:hover {
     background-color: #FF330030 !important;
 }
 .download-map:hover {
-    transition-duration: 400ms;
+    transition-duration: 200ms;
     background-color: #FFFFFF40;
 }
 .download-map-icon {
