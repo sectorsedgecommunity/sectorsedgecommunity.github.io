@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.sectorsedgecommunity.github.io/index.html</loc>
-        <lastmod>2024-10-18</lastmod>
-        <priority>0.9</priority>
+        <lastmod>2024-10-19</lastmod>
+        <priority>0.8</priority>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://www.sectorsedgecommunity.github.io/how-to-play.html</loc>
-        <lastmod>2024-10-18</lastmod>
+        <loc>https://www.sectorsedgecommunity.github.io/how-to-play/index.html</loc>
+        <lastmod>2024-10-19</lastmod>
         <priority>1.0</priority>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://www.sectorsedgecommunity.github.io/community.html</loc>
-        <lastmod>2024-10-18</lastmod>
+        <loc>https://www.sectorsedgecommunity.github.io/community/index.html</loc>
+        <lastmod>2024-10-19</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://www.sectorsedgecommunity.github.io/custom-maps.html</loc>
-        <lastmod>2024-10-18</lastmod>
+        <loc>https://www.sectorsedgecommunity.github.io/custom-maps/index.html</loc>
+        <lastmod>2024-10-19</lastmod>
         <priority>0.2</priority>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://www.sectorsedgecommunity.github.io/mapmaking.html</loc>
-        <lastmod>2024-10-18</lastmod>
+        <loc>https://www.sectorsedgecommunity.github.io/mapmaking/index.html</loc>
+        <lastmod>2024-10-19</lastmod>
         <priority>0.3</priority>
         <changefreq>weekly</changefreq>
     </url>
