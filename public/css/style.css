@@ -45,6 +45,17 @@ a {
 }
 
 /* Main bit */
+.dark-background-centered {
+    padding: 20px;
+    margin-top: 20px !important;
+    margin: auto;
+    background-color: #00000070;
+}
+.section-highlight-blue {
+    border-top-color: #1af7ff;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
 p {
     font-family: 'Montserrat', sans-serif; 
     color: #FFF;
@@ -74,25 +85,17 @@ details {
     margin: auto;
     margin-bottom: 10px !important;
 }
-.home {
+.base-text {
     font-size: 90%;
     font-weight: 475;
-    margin: auto;
-    margin-top: 20px;
     color: #FFF;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    background-color: #00000070;
     text-wrap: stable;
     width: calc(100% - 80px);
     max-width: 600px;
-    padding: 20px;
-    padding-bottom: 20px;
     padding-top: 15px;
     line-height: 23px;
-    border-top-color: #1af7ff;
-    border-top-width: 1px;
-    border-top-style: solid;
 }
 .yt-embed {
     aspect-ratio: 16 / 9;
@@ -150,7 +153,8 @@ iframe {
     width: fit-content;
     padding-left: 15px;
     padding-right: 15px;
-    height: 30px;
+    padding-bottom: 7px;
+    height: 20px;
 
     font-size: 12pt;
     font-family: 'Montserrat', sans-serif;
@@ -163,7 +167,7 @@ iframe {
     padding-top: 5px;
     font-weight: 425;
 }
-button:hover {
+.a-button:hover {
     transition-duration: 200ms;
     background-color: #1af7ff;
 }
@@ -178,31 +182,31 @@ button:hover {
     line-height: 18px;
     padding-bottom: 15px;
     max-width: 880px;
-}
-.maps_list {
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #1af7ff;
-    display: flex;
-    padding: 10px;
-    max-width: 880px;
+    padding: 20px;
     margin-top: 20px !important;
     margin: auto;
     background-color: #00000070;
+}
+.maps_list {
+    display: grid;
+    gap: 20px;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, 200px);
+    max-width: 880px;
     flex-direction: row;
 	flex-wrap: wrap;
     min-height: 350px;
 }
 .map_tile {
-    margin: 10px;
     background-color: #FFFFFF20;
     max-width: 200px !important;
     color: #FFF;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    flex-direction: row;
-	flex-wrap: wrap;
     max-height: 180px;
+}
+.maps_list > p {
+    width: 100%
 }
 .map_tile_preview {
     aspect-ratio: 16 / 9;
@@ -251,6 +255,10 @@ button:hover {
 .download-map-icon {
     margin: 0;
     width: auto;
+    height: 18px;
+    image-rendering: crisp-edges;
+}
+.workshop-icon-size {
     height: 18px;
     image-rendering: crisp-edges;
 }
