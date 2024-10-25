@@ -2,10 +2,9 @@
 
 body {
     background-image:url("../backgrounds/cr.png");
-    background-position-x: 99%;
+    background-position-x: 50%;
     background-size: cover;
     background-attachment: fixed;
-    height: 100%;
     margin: 0px;
     font-weight: 475;
     overflow: auto;
@@ -20,31 +19,52 @@ a {
 
 /* Silly top-nav */
 .nav {
+    min-width: fit-content;
     font-size: 0.75em;
-    display: flex;
-    margin-top: 0px;
-    width: 100%;
+    display: grid;
     height: 42px;
+    max-height: 42px;
     background-color: #00000070;
+    grid-template-areas: "logo home how-to-play community custom-maps mapmaking";
+    justify-content: start;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
 }
-
-.nav_logo {
-    margin: 0px !important;
-    padding: 7px;
-    width: auto
+.nav-item {
+    margin: 3px
+}
+.nav-logo {grid-area: "logo"}
+.nav-home {grid-area: "home"}
+.nav-how-to-play {grid-area: "how-to-play"}
+.nav-community {grid-area: "community"}
+.nav-custom-maps {grid-area: "custom-maps"}
+.nav-mapmaking {grid-area: "mapmaking"}
+.nav-selected {
+    text-decoration: underline !important;
+    text-decoration-thickness: 1.5px !important;
+    text-decoration-skip-ink: none;
 }
 .nav > a {
-    margin-top: 13.5px !important;
-    margin-bottom: 10px !important;
     border-width: 2px !important;
     text-decoration: none;
     margin: 12px;
-    display: inline-flex;
-    align-content: center;
     color: white
 }
 
 /* Main bit */
+.base-text {
+    font-size: 90%;
+    font-weight: 475;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-wrap: stable;
+    width: calc(80%);
+    max-width: 600px;
+    padding-top: 15px;
+    line-height: 23px;
+}
 .dark-background-centered {
     padding: 20px;
     margin-top: 20px !important;
@@ -55,6 +75,9 @@ a {
     border-top-color: #1af7ff;
     border-top-width: 1px;
     border-top-style: solid;
+}
+.community-page-logo { /* This is a stupid fix I shouldn't be keeping. I'm keeping it anyway. */
+    max-width: 75%
 }
 p {
     font-family: 'Montserrat', sans-serif; 
@@ -84,18 +107,6 @@ summary:hover {
 details {
     margin: auto;
     margin-bottom: 10px !important;
-}
-.base-text {
-    font-size: 90%;
-    font-weight: 475;
-    color: #FFF;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-wrap: stable;
-    width: calc(100% - 80px);
-    max-width: 600px;
-    padding-top: 15px;
-    line-height: 23px;
 }
 .yt-embed {
     aspect-ratio: 16 / 9;
@@ -324,11 +335,6 @@ details {
 h4 {
     margin-top: 40px;
     margin-bottom: 10px
-}
-img {
-    margin-bottom: 5px;
-    margin-top: 0px;
-    width: 50%
 }
 p.img_caption {
     color: #DDDDDD;
