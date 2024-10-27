@@ -16,15 +16,27 @@
 <body>
     <div class="nav" data-nosnippet>
         <img class="nav-item nav-logo" draggable="false" src="../public/se_community_logo.svg" height="30px" alt="Sector's Edge icon">
+        <div class="nav-options">
         <a class="nav-item nav-home" href="../index">Home</a>
         <a class="nav-item nav-how-to-play" href="../how-to-play">How to play</a>
         <a class="nav-item nav-community" href="../community">Community</a>
-        <a class="nav-item nav-custom-maps" href="../maps">Custom maps</a>
+        <a class="nav-item nav-custom-maps" href="../custom-maps">Custom maps</a>
         <a class="nav-item nav-mapmaking nav-selected" href="../mapmaking">Mapmaking</a>
+        </div>
+        <div class="mobile-nav-button">
+            <button id="mobile-nav-dropdown">
+                <img class="nav-logo" draggable="false" src="../public/hamburger.png" height="30px" alt="Navigation menu">
+                <div class="mobile-nav-menu">
+                    <a class="nav-item nav-home" href="../index">Home</a>
+                    <a class="nav-item nav-how-to-play" href="../how-to-play">How to play</a>
+                    <a class="nav-item nav-community" href="../community">Community</a>
+                    <a class="nav-item nav-custom-maps" href="../custom-maps">Custom maps</a>
+                    <a class="nav-item nav-mapmaking nav-selected" href="../mapmaking">Mapmaking</a>
+                </div>
+            </button>
+        </div>
     </div>
-    <div class="content" style="display: grid">
-        <iframe src="https://sectorsedgecommunity.github.io/mapping-docs/resources" width="100%" height="100%">
-    </div>
+    <iframe class="mapmaking-embed" src="https://sectorsedgecommunity.github.io/mapping-docs/resources">
 </body>
 
 </html>

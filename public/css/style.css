@@ -8,6 +8,8 @@ body {
     margin: 0px;
     font-weight: 475;
     overflow: auto;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Links */
@@ -19,22 +21,77 @@ a {
 
 /* Silly top-nav */
 .nav {
-    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    background-color: #00000070;
+    margin: 0;
     font-size: 0.75em;
-    display: grid;
     height: 42px;
     max-height: 42px;
-    background-color: #00000070;
-    grid-template-areas: "logo home how-to-play community custom-maps mapmaking";
-    justify-content: start;
+}
+.nav-options {
+    position: absolute;
+    transform-origin: center;
+    transform: translate(calc(50vw - 50%), 0%);
+    min-width: fit-content;
+    display: grid;
+    grid-template-areas: "home how-to-play community custom-maps mapmaking";
+    justify-content: center;
     align-content: center;
     justify-items: center;
     align-items: center;
 }
+.mobile-nav-button {
+    visibility: hidden;
+    position: absolute;
+    transform-origin: center;
+    transform: translate(calc(100vw - 100%));
+}
+.mobile-nav-menu {
+    position: absolute;
+    transform: translate(50vw, 0px);
+    display: none;
+    background-color: #000;
+    grid-template-columns: 200%;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+#mobile-nav-dropdown {
+    background-color: transparent;
+    border: none;
+}
+@media all and (max-width: 720px) {
+    .nav-options {
+        visibility: hidden;
+    }
+    .mobile-nav-button {
+        visibility: visible;
+    }
+    #mobile-nav-dropdown:focus-within .mobile-nav-menu {
+        position: absolute;
+        transform-origin: center;
+        transform: translate(-85%, 3%);
+        min-width: fit-content;
+        display: grid;
+    }
+}
+#nav_button {
+    font-weight: 475;
+    border: none;
+    margin: 9px;
+    width: fit-content !important;
+}
+#nav_button:hover {
+    transition-duration: 400ms;
+    color: #EEE;
+}
 .nav-item {
     margin: 3px
 }
-.nav-logo {grid-area: "logo"}
+.nav-logo {display: flex;}
 .nav-home {grid-area: "home"}
 .nav-how-to-play {grid-area: "how-to-play"}
 .nav-community {grid-area: "community"}
@@ -45,14 +102,15 @@ a {
     text-decoration-thickness: 1.5px !important;
     text-decoration-skip-ink: none;
 }
-.nav > a {
+.nav-item {
     border-width: 2px !important;
     text-decoration: none;
     margin: 12px;
     color: white
 }
-
-/* Main bit */
+/*
+    ||| Core parts |||
+*/
 .base-text {
     font-size: 90%;
     font-weight: 475;
@@ -76,15 +134,21 @@ a {
     border-top-width: 1px;
     border-top-style: solid;
 }
+/*
+    ||| Stupid fixes |||
+*/
 .community-page-logo { /* This is a stupid fix I shouldn't be keeping. I'm keeping it anyway. */
     max-width: 75%
 }
+.p-no-margin {
+    margin: 0
+}
+/*
+    ||| Main sections |||
+*/
 p {
     font-family: 'Montserrat', sans-serif; 
     color: #FFF;
-}
-.p-no-margin {
-    margin: 0
 }
 h3 {
     font-weight: 750;
@@ -93,6 +157,9 @@ h3 {
     line-height: 0px;
     color: #1af7ff;
 }
+/*
+    ||| How-to-play page |||
+*/
 summary {
     transition-duration: 400ms;
     margin: auto;
@@ -108,15 +175,20 @@ details {
     margin: auto;
     margin-bottom: 10px !important;
 }
+/*
+    ||| Embeds |||
+*/
 .yt-embed {
     aspect-ratio: 16 / 9;
     max-width: 500px
 }
-
-.content {
-    display: grid;
+.mapmaking-embed {
+    display: block;
     width: 100%;
-    height: calc(100vh - 42px);
+    height: calc(100vh - 44px);
+    margin: 0;
+    padding: 0;
+    border: none;
     background-color: #1b1b1f
 }
 
@@ -142,18 +214,6 @@ iframe {
     font-family: 'Montserrat', sans-serif;
 
     background: none;
-}
-
-#nav_button {
-    font-weight: 475;
-    background: none;
-    border: none;
-    margin: 9px;
-    width: fit-content !important;
-}
-#nav_button:hover {
-    transition-duration: 400ms;
-    color: #EEE;
 }
 
 .button-style-base {
@@ -182,6 +242,9 @@ iframe {
     transition-duration: 200ms;
     background-color: #1af7ff;
 }
+/*
+    ||| Custom maps page |||
+*/
 .maps-tip {
     letter-spacing: 0.1px;
     font-weight: 500;
@@ -192,7 +255,7 @@ iframe {
     padding: 10px;
     line-height: 18px;
     padding-bottom: 15px;
-    max-width: 880px;
+    max-width: 860px;
     padding: 20px;
     margin-top: 20px !important;
     margin: auto;
@@ -203,21 +266,21 @@ iframe {
     gap: 20px;
     grid-auto-flow: row;
     grid-template-columns: repeat(auto-fit, 200px);
-    max-width: 880px;
+    max-width: clamp(860px, 860px, 100vw);
     flex-direction: row;
 	flex-wrap: wrap;
     min-height: 350px;
+    margin: clamp(20px, auto);
 }
 .map_tile {
     background-color: #FFFFFF20;
-    max-width: 200px !important;
+    aspect-ratio: 1.2 / 1;
     color: #FFF;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    max-height: 180px;
 }
 .maps_list > p {
-    width: 100%
+    width: 100%;
 }
 .map_tile_preview {
     aspect-ratio: 16 / 9;
@@ -233,7 +296,7 @@ iframe {
 }
 .map_tile_author {
     text-rendering: optimizeLegibility;
-    font-size: 8px !important;
+    font-size: 9px !important;
     line-height: 5px;
     color: #ABABAB;
 }
@@ -243,7 +306,6 @@ iframe {
     color: #000;
 
     margin: 0;
-    margin-bottom: 15px;
     padding: 0;
     width: 18px;
     height: 18px;

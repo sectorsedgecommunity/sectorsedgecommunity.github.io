@@ -16,13 +16,27 @@
 <body>
     <div class="nav" data-nosnippet>
         <img class="nav-item nav-logo" draggable="false" src="../public/se_community_logo.svg" height="30px" alt="Sector's Edge icon">
+        <div class="nav-options">
         <a class="nav-item nav-home" href="../index">Home</a>
         <a class="nav-item nav-how-to-play" href="../how-to-play">How to play</a>
         <a class="nav-item nav-community" href="../community">Community</a>
-        <a class="nav-item nav-custom-maps nav-selected" href="../maps">Custom maps</a>
+        <a class="nav-item nav-custom-maps nav-selected" href="../custom-maps">Custom maps</a>
         <a class="nav-item nav-mapmaking" href="../mapmaking">Mapmaking</a>
+        </div>
+        <div class="mobile-nav-button">
+            <button id="mobile-nav-dropdown">
+                <img class="nav-logo" draggable="false" src="../public/hamburger.png" height="30px" alt="Navigation menu">
+                <div class="mobile-nav-menu">
+                    <a class="nav-item nav-home" href="../index">Home</a>
+                    <a class="nav-item nav-how-to-play" href="../how-to-play">How to play</a>
+                    <a class="nav-item nav-community" href="../community">Community</a>
+                    <a class="nav-item nav-custom-maps nav-selected" href="../custom-maps">Custom maps</a>
+                    <a class="nav-item nav-mapmaking" href="../mapmaking">Mapmaking</a>
+                </div>
+            </button>
+        </div>
     </div>
-    <div>
+    <div style="margin: 20px" data-nosnippet>
         <p class="maps-tip">Here you can find newer maps which are on the Steam Workshop.<br/>Maps which aren't on the Steam Workshop but are ready to play will be displayed here too.</p>
         <div class="maps_list dark-background-centered section-highlight-blue">
         <div class="map_tile" data-nosnippet>
@@ -97,7 +111,7 @@
             <button class="download-map" title="Download map" onclick="window.location.href='download/corahk_wasteland_novis.zip'"><img draggable="false" class="download-map-icon" src="../public/custommaps/download.png"></button>
             <button class="download-map" title="Go to Steam Workshop page" onclick="window.location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=3337381943'"><img draggable="false" class="download-map-icon" src="../public/custommaps/workshop.png"></button>
         </div>
-        <div class="map_tile" data-nosnippet>
+        <div class="map_tile" data-nosnippet hidden>
             <img draggable="false" class="map_tile_preview" src="../public/custommaps/no_preview.png"><p class="map_tile_name">Workshop map</p>
             <p class="map_tile_author">Author</p>
             <button class="download-disabled" title="Download map"><img draggable="false" class="download-map-icon" src="../public/custommaps/download.png"></button>
