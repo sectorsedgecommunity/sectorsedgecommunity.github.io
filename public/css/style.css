@@ -7,7 +7,8 @@ body {
     background-attachment: fixed;
     margin: 0px;
     font-weight: 475;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
 }
@@ -143,6 +144,9 @@ a {
 .p-no-margin {
     margin: 0
 }
+.p-one-em {
+    font-size: 1em !important;
+}
 /*
     ||| Main sections |||
 */
@@ -151,6 +155,7 @@ p {
     color: #FFF;
 }
 h3 {
+    text-transform: uppercase;
     font-weight: 750;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -250,7 +255,7 @@ iframe {
     font-weight: 500;
     text-align: center;
     text-rendering: geometricPrecision;
-    font-size: 14px;
+    font-size: 0.85em;
     margin: auto;
     padding: 10px;
     line-height: 18px;
@@ -282,15 +287,27 @@ iframe {
 .maps_list > p {
     width: 100%;
 }
+.map-name-label {
+    position: relative;
+    image-rendering: crisp-edges;
+    top: 5px;
+    height: 12px;
+}
+.zero-size {
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
 .map_tile_preview {
+    line-height: 0;
     aspect-ratio: 16 / 9;
     background-color: #FFFFFF10;
     width: 100%;
     margin: 0
 }
 .map_tile_name, .map_tile_author {
-    line-height: 5px;
-    font-size: 12px;
+    line-height: 1em;
+    font-size: 0.75em;
     margin: 10px;
     margin-top: 8px;
 }
@@ -334,6 +351,50 @@ iframe {
 .workshop-icon-size {
     height: 18px;
     image-rendering: crisp-edges;
+}
+.map-tile-buttons {
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    column-gap: 5px;
+    padding-bottom: 5px;
+    justify-content: center;
+}
+
+/* Never do this. */
+.info-overlay-fix {
+    width: 0;
+    height: 0;
+}
+.map-info-overlay {
+    display: none;
+}
+.map-info-header {
+    position: relative;
+    text-align: left;
+}
+.map-info-content {
+    font-size: 0.9em;
+    text-align: left;
+}
+.map-info {
+}
+.map-info:focus-within {
+    .map-info-overlay {
+        display: block;
+        position: relative;
+        background-color: #000000C0;
+        backdrop-filter: blur(1px);
+        padding: 5px;
+        right: 65px;
+        bottom: 182.5px;
+        width: 190px;
+        height: 175px;
+    }
+}
+.overlay-fix {
+    width: 0;
+    height: 0;
+    display: none;
 }
 
 /* Mapmaking table */
