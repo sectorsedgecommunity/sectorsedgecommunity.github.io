@@ -376,8 +376,6 @@ iframe {
     font-size: 0.9em;
     text-align: left;
 }
-.map-info {
-}
 .map-info:focus-within {
     .map-info-overlay {
         display: block;
