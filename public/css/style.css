@@ -158,8 +158,8 @@ h3 {
     text-transform: uppercase;
     font-weight: 750;
     font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    line-height: 0px;
+    font-size: 0.75em;
+    line-height: 0.75em;
     color: #1af7ff;
 }
 /*
@@ -255,10 +255,10 @@ iframe {
     font-weight: 500;
     text-align: center;
     text-rendering: geometricPrecision;
-    font-size: 0.85em;
+    font-size: 0.8em;
     margin: auto;
     padding: 10px;
-    line-height: 18px;
+    line-height: 1.1em;
     padding-bottom: 15px;
     max-width: 860px;
     padding: 20px;
@@ -313,8 +313,8 @@ iframe {
 }
 .map_tile_author {
     text-rendering: optimizeLegibility;
-    font-size: 9px !important;
-    line-height: 5px;
+    font-size: 0.5em;
+    line-height: 0.2em;
     color: #ABABAB;
 }
 .download-map, .download-disabled {
@@ -353,6 +353,7 @@ iframe {
     image-rendering: crisp-edges;
 }
 .map-tile-buttons {
+    line-height: 0;
     display: grid;
     grid-template-columns: 20px 20px 20px;
     column-gap: 5px;
@@ -361,38 +362,41 @@ iframe {
 }
 
 /* Never do this. */
-.info-overlay-fix {
-    width: 0;
-    height: 0;
+.map-info {
+    position: relative;
+    line-height: 0;
 }
 .map-info-overlay {
+    color: #AAAAAA;
+    text-rendering: optimizeLegibility;
     display: none;
+    line-height: 0;
 }
 .map-info-header {
     position: relative;
     text-align: left;
+    margin-top: 2px;
+    margin-bottom: 0.5em;
 }
 .map-info-content {
     font-size: 0.9em;
+    line-height: 1.1em;
     text-align: left;
+    margin-top: 0;
+    padding-bottom: 0.75em;
 }
 .map-info:focus-within {
     .map-info-overlay {
         display: block;
-        position: relative;
+        position: absolute;
         background-color: #000000C0;
         backdrop-filter: blur(1px);
         padding: 5px;
-        right: 65px;
-        bottom: 182.5px;
+        left: -65px;
+        top: -158.1px;
         width: 190px;
-        height: 175px;
+        height: 171px;
     }
-}
-.overlay-fix {
-    width: 0;
-    height: 0;
-    display: none;
 }
 
 /* Mapmaking table */
