@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap');
 
 body {
-    background-image:url("../backgrounds/crossing.png");
+    background-image:url("../backgrounds/original.png");
     background-position-x: 50%;
     background-size: cover;
     background-attachment: fixed;
@@ -20,16 +20,16 @@ a {
 
 /* Silly top-nav */
 .nav {
-    display: flex;
+    display: grid;
     align-items: center;
     width: 100vw;
-    background-color: #00000070;
+    background-color: #131f2190;
     margin: 0;
     font-size: 0.75em;
     height: 42px;
     max-height: 42px;
 }
-.nav-options {
+.nav-buttons {
     position: absolute;
     transform-origin: center;
     transform: translate(calc(50vw - 50%), 0%);
@@ -40,6 +40,58 @@ a {
     align-content: center;
     justify-items: center;
     align-items: center;
+}
+#mobile-nav-dropdown {
+    background-color: transparent;
+    border: none;
+}
+#nav_button {
+    font-weight: 475;
+    border: none;
+    margin: 9px;
+    width: fit-content !important;
+}
+#nav_button:hover {
+    transition-duration: 400ms;
+    color: #EEE;
+}
+.nav-item {
+    margin: 3px
+}
+.nav-logo {display: flex;margin: 5px}
+.nav-home {grid-area: "home"}
+.nav-how-to-play {grid-area: "how-to-play"}
+.nav-news {grid-area: "news"}
+.nav-community {grid-area: "community"}
+.nav-custom-maps {grid-area: "custom-maps"}
+.nav-mapmaking {grid-area: "mapmaking"}
+.nav-selected {
+    text-decoration: underline !important;
+    text-decoration-thickness: 1.5px !important;
+    text-decoration-skip-ink: none;
+}
+.nav-item {
+    border-width: 2px !important;
+    text-decoration: none;
+    margin: 12px;
+    color: white
+}
+
+/* Mobile nav menu */
+@media all and (max-width: 940px) {
+    .nav-options {
+        visibility: hidden;
+    }
+    .mobile-nav-button {
+        visibility: visible;
+    }
+    #mobile-nav-dropdown:focus-within .mobile-nav-menu {
+        position: absolute;
+        transform-origin: center;
+        transform: translate(-85%, 3%);
+        min-width: fit-content;
+        display: grid;
+    }
 }
 .mobile-nav-button {
     visibility: hidden;
@@ -58,56 +110,6 @@ a {
     justify-items: center;
     align-items: center;
 }
-#mobile-nav-dropdown {
-    background-color: transparent;
-    border: none;
-}
-@media all and (max-width: 720px) {
-    .nav-options {
-        visibility: hidden;
-    }
-    .mobile-nav-button {
-        visibility: visible;
-    }
-    #mobile-nav-dropdown:focus-within .mobile-nav-menu {
-        position: absolute;
-        transform-origin: center;
-        transform: translate(-85%, 3%);
-        min-width: fit-content;
-        display: grid;
-    }
-}
-#nav_button {
-    font-weight: 475;
-    border: none;
-    margin: 9px;
-    width: fit-content !important;
-}
-#nav_button:hover {
-    transition-duration: 400ms;
-    color: #EEE;
-}
-.nav-item {
-    margin: 3px
-}
-.nav-logo {display: flex;}
-.nav-home {grid-area: "home"}
-.nav-how-to-play {grid-area: "how-to-play"}
-.nav-news {grid-area: "news"}
-.nav-community {grid-area: "community"}
-.nav-custom-maps {grid-area: "custom-maps"}
-.nav-mapmaking {grid-area: "mapmaking"}
-.nav-selected {
-    text-decoration: underline !important;
-    text-decoration-thickness: 1.5px !important;
-    text-decoration-skip-ink: none;
-}
-.nav-item {
-    border-width: 2px !important;
-    text-decoration: none;
-    margin: 12px;
-    color: white
-}
 /*
     ||| Core parts |||
 */
@@ -116,18 +118,18 @@ a {
     font-weight: 475;
     color: #FFF;
     text-align: center;
+    text-rendering: optimizeLegibility;
     font-family: 'Montserrat', sans-serif;
     text-wrap: stable;
-    width: calc(80%);
-    max-width: 600px;
-    padding-top: 15px;
+    margin: auto;
     line-height: 23px;
 }
 .dark-background-centered {
     padding: 20px;
-    margin-top: 20px !important;
     margin: auto;
+    margin-top: 20px !important;
     background-color: #00000070;
+    max-width: 600px;
 }
 .section-highlight-blue {
     border-top-color: #1af7ff;
@@ -137,6 +139,9 @@ a {
 /*
     ||| Stupid fixes |||
 */
+.center {
+    margin: auto !important;
+}
 .community-page-logo { /* This is a stupid fix I shouldn't be keeping. I'm keeping it anyway. */
     max-width: 75%
 }
@@ -161,6 +166,26 @@ h3 {
     line-height: 0.75em;
     color: #1af7ff;
 }
+.quote {
+    background-color: #FFFFFF10;
+    margin: auto;
+    padding: 5px;
+}
+blockquote {
+    font-family: 'Montserrat', sans-serif; 
+    color: #EEE;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+blockquote > p {
+    color: #EEE;
+    margin-left: auto;
+    font-size: 90%;
+    margin: 0 !important;
+}
+cite {
+    margin-left: 20px;
+}
 /*
     ||| How-to-play page |||
 */
@@ -184,7 +209,7 @@ details {
 */
 .yt-embed {
     aspect-ratio: 16 / 9;
-    max-width: 500px
+    max-width: 502px
 }
 .mapmaking-embed {
     display: block;
@@ -248,7 +273,7 @@ iframe {
 }
 /*
     ||| News page (CONCEPT) |||
-*/
+
 .news-list {
     padding: 20px;
     margin: auto;
@@ -320,6 +345,7 @@ iframe {
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
 }
+*/
 
 /*
     ||| Custom maps page |||
