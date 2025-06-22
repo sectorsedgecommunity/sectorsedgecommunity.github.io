@@ -79,11 +79,11 @@ a {
 
 /* Mobile nav menu */
 @media all and (max-width: 940px) {
-    .nav-options {
+    .nav-buttons {
         visibility: hidden;
     }
     .mobile-nav-button {
-        visibility: visible;
+        visibility: visible !important;
     }
     #mobile-nav-dropdown:focus-within .mobile-nav-menu {
         position: absolute;
