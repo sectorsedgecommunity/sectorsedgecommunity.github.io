@@ -146,7 +146,7 @@ a {
     max-width: 75%
 }
 .p-no-margin {
-    margin: 0
+    margin: 0;
 }
 .p-one-em {
     font-size: 1em !important;
@@ -273,7 +273,7 @@ iframe {
 }
 /*
     ||| News page (CONCEPT) |||
-
+*/
 .news-list {
     padding: 20px;
     margin: auto;
@@ -345,7 +345,6 @@ iframe {
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
 }
-*/
 
 /*
     ||| Custom maps page |||
@@ -471,6 +470,22 @@ iframe {
     text-rendering: optimizeLegibility;
     display: none;
     line-height: 0;
+}
+.centered-overlay {
+    left: -136px !important;
+    top: -208.5px !important;
+    width: 280px !important;
+    height: 233px !important;
+    font-size: 1em;
+}
+.tournament-sources-button {
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+
+    font-size: 0.9em;
+    line-height: 1.5em;
+    display: inline-block;
+    margin-left: 0 !important
 }
 .map-info-header {
     position: relative;
