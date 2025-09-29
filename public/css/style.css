@@ -19,7 +19,8 @@ body {
 a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 475;
-    color: #1af7ff
+    color: #1af7ff;
+	user-select: none;
 }
 
 /* Silly top-nav */
@@ -140,6 +141,10 @@ a {
     border-top-width: 1px;
     border-top-style: solid;
 }
+.section-based-gap {
+    display: grid;
+	gap: 20px
+}
 /*
     ||| Stupid fixes |||
 */
@@ -190,6 +195,29 @@ blockquote > p {
 cite {
     margin-left: 20px;
 }
+.generic-table {
+	border-spacing: 1px;
+	background-color: #FFFFFF10;
+	table-layout: auto;
+	tbody {
+		background-color: #FFFFFF10;
+	}
+	th {
+		background-color: #FFFFFF10;
+		padding-left: 10px;
+		padding-right: 10px;
+		height: fit-content;
+	}
+	td {
+		background-color: #FFFFFF20;
+		line-height: 1.25em;
+		padding: 10px
+	}
+	p {
+		justify-content: center;
+		text-align: center;
+	}
+}
 /*
     ||| How-to-play page |||
 */
@@ -199,6 +227,7 @@ summary {
     background-color: #FFFFFF10;
     max-width: 100px;
     padding: 3px;
+	user-select: none;
 }
 summary:hover {
     transition-duration: 200ms;
@@ -223,6 +252,13 @@ details {
     padding: 0;
     border: none;
     background-color: #1b1b1f
+}
+.discord-invite {
+	border-top-color: #5865f2 !important;
+	border-top-style: solid !important;
+	border-top-width: 4px !important;
+	background-color: #1e1f22 !important;
+	color: #EEE !important;
 }
 
 .mapmakingdocs {
