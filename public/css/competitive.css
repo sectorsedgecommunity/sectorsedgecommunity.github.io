@@ -1,0 +1,17 @@
+.gallery-competitive {
+    max-width: 600px;
+    grid-template-columns: repeat(auto-fit, 290px);
+}
+.tournament-sources-button {
+    display: inline-block;
+    margin: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    transition: background-color 400ms;
+
+    line-height: 1.7em;
+    font-size: 0.75em;
+	font-weight: 500;
+	text-align: left !important;
+}
